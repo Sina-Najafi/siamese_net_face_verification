@@ -31,7 +31,7 @@ number of epochs, train data, validation data as input to start the training.
 In this folder, you will find a .ipynb file that I initially used to train the model. everything is there in one notebook.
 
 ## How to get things done right away...
-fisrt import the create_dataset, siamese_network and train functions from the python scripts then
+First import the create_dataset, siamese_network and train functions from the python scripts then
 you can modify the following code to instantly train this siamese network model:
 
 ```
