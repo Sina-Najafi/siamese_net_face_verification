@@ -6,6 +6,7 @@ from tensorflow.keras import optimizers
 from tensorflow.keras import metrics
 from tensorflow.keras import Model
 from tensorflow.keras.applications.resnet import ResNet50
+from tensorflow.keras.applications import EfficientNetB0, MobileNet
 
 def embedding_model(input_shape): # (224, 224, 3)
   '''
@@ -17,6 +18,7 @@ def embedding_model(input_shape): # (224, 224, 3)
 
   # Use a pretrained model(ResNet50 in our case) for feature extraction.
   base_model = ResNet50(weights='imagenet', include_top=False, input_shape=input_shape)
+  # base_model = MobileNet(weights='imagenet', include_top=False, input_shape=input_shape)
 
   # Freeze the layers of the pretrained model.
   for layer in base_model.layers:
